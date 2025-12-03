@@ -68,7 +68,7 @@ services:
       - "192.168.0.42:443:443" # Adapt IP on which the container shoud listen on, or remove IP part if it should listen on all interfaces
       - "192.168.0.42:80:80" # (Optional) Only needed if http should be redirected to https
     depends_on:
-    - myapp # Adapt to name of your app
+      - myapp # Adapt to name of your app
   myapp: # Your http-only app that should be proxied
     image: hello-world:latest
 ```
